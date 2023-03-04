@@ -1,0 +1,42 @@
+
+
+-- Stored procedure for Inserting an employee --
+CREATE PROCEDURE InsertEmployee1
+    @EMPNO decimal(4,0),
+    @Name nvarchar(50),
+    @job nvarchar(50),
+    @Salary decimal(10, 2)
+AS
+BEGIN
+    INSERT INTO EMP (EMPNO,ENAME, JOB, SAL)
+    VALUES (@EMPNO,@Name, @job, @Salary)
+END
+
+-- Stored procedure for updating an existing employee --
+CREATE PROCEDURE UpdateEmployee
+    @EMPNO decimal(4,0),
+    @Name nvarchar(50),
+    @job nvarchar(50),
+    @Salary decimal(10, 2)
+AS
+BEGIN
+    UPDATE EMP
+    SET ENAME = @Name, job = @job, SAL = @Salary
+    WHERE EMPNO = @EMPNO
+END
+
+-- Stored procedure for deleting an employee --
+CREATE PROCEDURE DeleteEmployee
+    @EMPNO decimal(4,0)
+AS
+BEGIN
+    DELETE FROM EMP
+    WHERE EMPNO = @EMPNO
+END
+
+-- Stored procedure for retrieving all employees --
+CREATE PROCEDURE GetAllEmployees
+AS
+BEGIN
+    SELECT * FROM EMP
+END
