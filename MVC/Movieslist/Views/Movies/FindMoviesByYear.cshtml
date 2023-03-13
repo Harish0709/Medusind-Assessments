@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplication1.Models.TamilMovy>
+
+@{
+    ViewBag.Title = "FindMoviesByYear";
+}
+
+<h2>FindMoviesByYear</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfRelease)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfRelease)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Mid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Mid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Mid })
+        </td>
+    </tr>
+}
+
+</table>
