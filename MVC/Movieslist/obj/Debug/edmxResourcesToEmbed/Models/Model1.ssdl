@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoviesDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TamilMovies">
+    <Key>
+      <PropertyRef Name="Mid" />
+    </Key>
+    <Property Name="Mid" Type="int" Nullable="false" />
+    <Property Name="MovieName" Type="varchar" MaxLength="255" />
+    <Property Name="DateOfRelease" Type="date" />
+  </EntityType>
+  <EntityContainer Name="MoviesDBModelStoreContainer">
+    <EntitySet Name="TamilMovies" EntityType="Self.TamilMovies" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
