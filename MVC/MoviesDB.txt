@@ -1,0 +1,20 @@
+CREATE TABLE TamilMovies (
+  Mid INT PRIMARY KEY,
+  MovieName VARCHAR(255),
+  DateOfRelease DATE
+);
+
+INSERT INTO TamilMovies (Mid, MovieName, DateOfRelease)
+VALUES
+  (001, 'Master', '2021-01-13'),
+  (002, 'Karnan', '2021-04-09'),
+  (003, 'Soorarai Pottru', '2020-11-12'),
+  (004, 'Asuran', '2019-10-04'),
+  (005, 'Bigil', '2019-10-25'),
+  (006, 'Vadachennai','2018-10-17'),
+  (007, '96','2018-10-04'),
+  (008, 'Vivegam','2017-08-24'),
+  (009, 'Theri','2016-04-14'),
+  (0010, 'Remo','2016-10-07')
+
+  
